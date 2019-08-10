@@ -3,6 +3,13 @@ import "../assets/styles.css";
 import logo from "../assets/images/pokemon-icon.png";
 
 export default class Details extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			isNull: "None"
+		};
+	}
 	render() {
 		return (
 			<Fragment>
@@ -13,23 +20,25 @@ export default class Details extends Component {
 				) : (
 					<Fragment>
 						<div className="header">
-							<div className="title">Details Pokemon</div>
+							<div className="title">Details Pokémon</div>
 						</div>
 						<div className="body">
 							<div className="pokemon-image">
 								<img
-									src={this.props.data.sprites.front_default}
+									src={
+										this.props.data.sprites.front_default ==
+										null
+											? logo
+											: this.props.data.sprites
+													.front_default
+									}
 									alt="Front"
-									className="image"
-								/>
-								<img
-									src={this.props.data.sprites.back_default}
-									alt="Back"
 									className="image"
 								/>
 							</div>
 							<div className="pokemon-name">
-								{this.props.data.name}
+								{this.props.data.name} - #
+								{this.props.data.order}
 							</div>
 							<div className="pokemon-type">
 								{this.props.data.types.map((item, index) => {
@@ -39,6 +48,94 @@ export default class Details extends Component {
 										</div>
 									);
 								})}
+							</div>
+							<div>
+								<span className="details-title">Abilities</span>
+								<div className="details-data">
+									{this.props.data.abilities.map(
+										(item, index) => {
+											return (
+												<div
+													key={index}
+													className="details-name"
+												>
+													{item.ability.name}
+												</div>
+											);
+										}
+									)}
+								</div>
+							</div>
+							<div>
+								<span className="details-title">
+									Held Items
+								</span>
+								<div className="details-data">
+									{this.props.data.held_items == "" ? (
+										<div className="details-name">
+											{this.state.isNull}
+										</div>
+									) : (
+										<span></span>
+									)}
+									{this.props.data.held_items.map(
+										(item, index) => {
+											return (
+												<div
+													key={index}
+													className="details-name"
+												>
+													{item.item.name}
+												</div>
+											);
+										}
+									)}
+								</div>
+							</div>
+							<div>
+								<span className="details-title">
+									Base Experience
+								</span>
+								<div className="details-data">
+									<div className="details-name">
+										{this.props.data.base_experience}
+									</div>
+								</div>
+							</div>
+							<div>
+								<span className="details-title">Height</span>
+								<div className="details-data">
+									<div className="details-name">
+										{this.props.data.height}
+									</div>
+								</div>
+							</div>
+							<div>
+								<span className="details-title">Weight</span>
+								<div className="details-data">
+									<div className="details-name">
+										{this.props.data.weight}
+									</div>
+								</div>
+							</div>
+							<div>
+								<span className="details-title">Stats</span>
+								<div className="details-data">
+									{this.props.data.stats.map(
+										(item, index) => {
+											return (
+												<div
+													key={index}
+													className="details-name"
+												>
+													{item.stat.name}
+													<br />
+													{item.base_stat}
+												</div>
+											);
+										}
+									)}
+								</div>
 							</div>
 						</div>
 					</Fragment>
