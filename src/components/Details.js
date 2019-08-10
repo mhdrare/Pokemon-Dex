@@ -120,17 +120,20 @@ export default class Details extends Component {
 							</div>
 							<div>
 								<span className="details-title">Stats</span>
-								<div className="details-data">
+								<div className="details-stats">
 									{this.props.data.stats.map(
 										(item, index) => {
 											return (
 												<div
 													key={index}
-													className="details-name"
+													className="details-stats-name"
 												>
-													{item.stat.name}
-													<br />
-													{item.base_stat}
+													<div className="stats-name">
+														{item.stat.name}
+													</div>
+													<div className="base-stats">
+														{item.base_stat}
+													</div>
 												</div>
 											);
 										}
