@@ -84,6 +84,7 @@
 
 .body {
 	padding: 0px 50px;
+	transition: all 0.5s;
 }
 
 .body .pokemon-name {
@@ -170,4 +171,36 @@
 .filter .type::-webkit-scrollbar-thumb {
 	background-color: darkgrey;
 	outline: 1px solid slategrey;
+}
+
+.details-data {
+	display: flex;
+	flex-direction: row;
+}
+
+.details-name {
+	min-width: 50px;
+	color: #fff;
+	border-radius: 5px;
+	padding: 1px;
+	padding-right: 7px;
+	padding-left: 7px;
+	margin: 3px;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.4);
+	font-size: calc(6px + 1vmin);
+	text-transform: uppercase;
+}
+
+.details-title {
+	margin-top: 2vh;
+	font-size: calc(3px + 2vmin);
+	font-family: system-ui;
+	color: #fff;
+	font-weight: bold;
+}
+
+.loading {
+	display: flex;
+	justify-content: center;
 }
