@@ -21,6 +21,17 @@ A mini-encyclopedia of Pokémon.
 ### Live Demo
 Here is a working live demo : [Pokemon Dex](https://pokemon-dex.netlify.com/)
 
+### Screenshots
+* Laptop/Desktop
+![](https://user-images.githubusercontent.com/38139389/62820825-4cd39780-bb94-11e9-8978-2e25779b63e3.png)
+![](https://user-images.githubusercontent.com/38139389/62820826-4d6c2e00-bb94-11e9-88f8-c697bade2c13.png)
+
+* Mobile
+<div align="center">
+    <img width="300" src="https://user-images.githubusercontent.com/38139389/62820834-7391ce00-bb94-11e9-81c5-cb28681b2c41.png">
+    <img width="300" src="https://user-images.githubusercontent.com/38139389/62820835-7391ce00-bb94-11e9-941a-78daf447e2a6.png">
+</div>
+
 ### Developing
 1. Open your terminal or command prompt
 2. Type `git clone https://github.com/mhdrare/Pokemon-Dex.git`
