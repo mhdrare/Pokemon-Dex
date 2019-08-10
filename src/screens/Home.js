@@ -46,17 +46,13 @@ class Home extends Component {
 		return (
 			<div className="container">
 				<div className="details">
-					{this.state.details === "" ? (
-						<p>NONE</p>
-					) : (
-						<Details data={this.state.details} />
-					)}
+					<Details data={this.state.details} />
 				</div>
 				<div className="list">
 					<Header />
 					<div className="list-poke">
 						{this.state.isLoading ? (
-							<p>LOADING</p>
+							<p className="loading">Loading...</p>
 						) : this.state.pokemonByType == "" ? (
 							this.state.pokemon.data.results.map(
 								(item, index) => {
@@ -94,7 +90,7 @@ class Home extends Component {
 					<div className="filter">
 						<div className="type">
 							{this.state.isLoading ? (
-								<p>LOADING</p>
+								<p className="loading">Loading...</p>
 							) : (
 								this.state.type.data.results.map(
 									(item, index) => {
