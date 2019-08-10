@@ -1,0 +1,173 @@
+.container {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: row;
+}
+
+.header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 10vh;
+	background-color: #ef5350;
+}
+
+.header .title {
+	flex: 1;
+	color: #fff;
+	font-size: calc(7px + 2vmin);
+	font-family: system-ui;
+	text-transform: uppercase;
+	padding: 0px 50px;
+}
+
+.header .logo {
+	height: 40px;
+	padding: 0px 50px;
+}
+
+.details {
+	flex: 1;
+	background-color: transparent;
+	background-color: #ef5350;
+}
+
+.list {
+	flex: 1;
+	background-color: transparent;
+}
+
+.name {
+	min-height: 30px;
+	display: flex;
+	text-transform: capitalize;
+	cursor: pointer;
+	transition: all 0.5s;
+	justify-content: center;
+	align-items: center;
+}
+
+.name:hover {
+	background-color: #f1f1f1;
+	color: #000;
+}
+
+.list-poke {
+	overflow: auto;
+	height: 84vh;
+}
+
+.list-poke::-webkit-scrollbar {
+	width: 0.5em;
+}
+
+.list-poke::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.list-poke::-webkit-scrollbar-thumb {
+	background-color: darkgrey;
+	outline: 1px solid slategrey;
+}
+
+.blank {
+	display: flex;
+	flex-direction: column;
+	height: 90vh;
+	align-items: center;
+	justify-content: center;
+}
+
+.blank .logo {
+	max-width: 250px;
+}
+
+.body {
+	padding: 0px 50px;
+}
+
+.body .pokemon-name {
+	display: flex;
+	color: #fff;
+	transition: all 0.5px;
+	justify-content: center;
+	font-size: calc(7px + 2vmin);
+	font-family: system-ui;
+	text-transform: capitalize;
+}
+
+.body .pokemon-type {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.body .pokemon-type .type {
+	min-width: 50px;
+	color: #fff;
+	border-radius: 5px;
+	padding: 1px;
+	padding-right: 7px;
+	padding-left: 7px;
+	margin: 3px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.4);
+	font-size: calc(6px + 1vmin);
+	text-transform: uppercase;
+}
+
+.body .pokemon-image {
+	display: flex;
+	justify-content: center;
+}
+
+.image {
+	width: 15vw;
+}
+
+.filter {
+	display: flex;
+	height: 6vh;
+	align-items: flex-end;
+}
+
+.filter .type {
+	flex: 1;
+	flex-direction: row;
+	white-space: nowrap;
+	overflow: auto;
+	max-width: 50vw;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.type-poke {
+	display: inline;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin: 5px;
+	cursor: pointer;
+	color: #fff;
+	border-radius: 5px;
+	background-color: rgba(0, 0, 0, 0.6);
+	font-size: calc(6px + 1vmin);
+	text-transform: uppercase;
+	transition: all 0.5s;
+}
+
+.type-poke:hover {
+	background-color: rgba(83, 0, 0, 0.4);
+}
+
+.filter .type::-webkit-scrollbar {
+	height: 0.4em;
+}
+
+.filter .type::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.filter .type::-webkit-scrollbar-thumb {
+	background-color: darkgrey;
+	outline: 1px solid slategrey;
+}
